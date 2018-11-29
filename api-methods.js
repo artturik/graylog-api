@@ -3754,5 +3754,34 @@ module.exports = {
         type: 'RoleResponse'
       }
     ]
-  }
+  },
+  getPipelineRules: {
+      path: '/plugins/org.graylog.plugins.pipelineprocessor/system/pipelines/rule',
+      summary: 'Get a list of all rules',
+      notes: '',
+      method: 'GET',
+      parameters: []
+  },
+  updatePipelineRule: {
+      path: '/plugins/org.graylog.plugins.pipelineprocessor/system/pipelines/rule/{ruleId}',
+      summary: 'Get a list of all rules',
+      notes: '',
+      method: 'PUT',
+      parameters: [
+          {
+              name: 'ruleId',
+              description: '',
+              required: true,
+              paramType: 'path',
+              type: 'String'
+          },
+          {
+              name: 'JSON body',
+              description: '',
+              required: true,
+              paramType: 'body',
+              type: 'IndexSetUpdateRequest'
+          }
+      ]
+  },
 };
